@@ -1,0 +1,82 @@
+:root {
+    font-size: 16px;
+    --white:#F3F0F0;
+    --black: #383838;
+    --transition-duration: .33s ease;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: var(--black);
+}
+
+body {
+    background: var(--white);
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--white);
+    height: 100vh;
+    max-height: 100vh;
+    max-height: -webkit-fill-available;
+}
+
+h1 {
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.text-button {
+    display: block;
+    text-decoration: none;
+    background: var(--white);
+    padding: .5rem 1.25rem;
+    border-radius: .4rem;
+    transition: color var(--transition-duration),  var(--transition-duration);
+}
+
+.text-button > p {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.text-button:hover {
+    background: var(--black);
+}
+
+.text-button:hover > p {
+    color: var(--white);
+}
+
+nav > a {
+    display: block;
+    width: 100vw;
+    position: fixed;
+    text-align: center;
+}
+
+nav > a > p {
+    font-family: 'Consolas', monospace;
+    color: var(--black);
+}
+
+@media only screen and (max-device-width: 720px) {
+    .text-button {
+        background: var(--black);
+    }
+
+    .text-button > p {
+        color: var(--white);
+    }
+
+    .text-button:hover > p {
+        color: var(--white);
+    }
+}
